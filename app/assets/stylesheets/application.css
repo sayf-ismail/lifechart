@@ -1,0 +1,9 @@
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+}
+
+.errmsg {
+  color: red;
+}

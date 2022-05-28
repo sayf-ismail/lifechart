@@ -1,0 +1,15 @@
+<h1>Welcome to <%= @lifechart.name %>'s Lifechart Page!</h1>
+<p>Here are frequency of their activities:</p>
+
+<%= link_to "BACK", lifecharts_path %>
+
+<ul>
+  <li>🏃🏽 body 🏃🏽 <%= @lifechart.body_freq %> /week</li>
+  <li>🧘🏼‍♀️ mind 🧘🏼‍♀️<%= @lifechart.mind_freq %> /year</li>
+  <li>🫶🏻 love 🫶🏻<%= @lifechart.love_freq %> /month</li>
+  <li>💰 money 💰<%= @lifechart.money_freq %> /week</li>
+  <li>🛝 play 🛝<%= @lifechart.play_freq %> /year</li>
+  <li>👨🏻‍💻 work 👨🏻‍💻<%= @lifechart.work_freq %>/month</li>
+</ul>
+
+<%= render 'shared/chart' %>

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  birthday: 2022-05-27
+  body_freq: 1
+  mind_freq: 1
+  love_freq: 1
+  work_freq: 1
+  money_freq: 1
+  play_freq: 1
+
+two:
+  birthday: 2022-05-27
+  body_freq: 1
+  mind_freq: 1
+  love_freq: 1
+  work_freq: 1
+  money_freq: 1
+  play_freq: 1

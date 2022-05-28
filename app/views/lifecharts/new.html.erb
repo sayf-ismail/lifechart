@@ -1,0 +1,70 @@
+<h1>New Profile</h1>
+
+
+<%= form_with model: @lifechart do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @lifechart.errors.full_messages_for(:name).each do |msg| %>
+      <div class="errmsg"><%= msg %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label "DD MMM YYYY eg 30 Sep 2000" %><br>
+    <%= form.text_field :birthday %>
+    <% @lifechart.errors.full_messages_for(:birthday).each do |msg| %>
+     <div class="errmsg"><%= msg %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label "Body frequency" %>
+    <%= form.number_field :body_freq, in: 1..31 %>
+  </div>
+  <%# <div> %>
+    <%# <%= form.label "Per" %> 
+    <%# <%= form.select :freq1, ["day", "week", "month"] %><br> 
+  <%# </div> %>
+  <div>
+    <%= form.label "Mind frequency" %>
+    <%= form.number_field :mind_freq, in: 1..31 %>
+  </div>
+  <%# <div> %>
+    <%# <%= form.label "Per" %> 
+    <%# <%= form.select :freq2, ["day", "week", "month"] %><br> 
+  <%# </div> %>
+  <div>
+    <%= form.label "Love frequency" %>
+    <%= form.number_field :love_freq, in: 1..31 %>
+  </div>
+  <%# <div> %>
+    <%# <%= form.label "Per" %> 
+    <%# <%= form.select :freq3, ["day", "week", "month"] %><br> 
+  <%# </div> %>
+  <div>
+    <%= form.label "Work frequency" %>
+    <%= form.number_field :work_freq, in: 1..31 %>
+  </div>
+  <%# <div> %>
+    <%# <%= form.label "Per" %> 
+    <%# <%= form.select :freq4, ["day", "week", "month"] %><br> 
+  <%# </div> %>
+  <div>
+    <%= form.label "Money frequency" %>
+    <%= form.number_field :money_freq, in: 1..31 %>
+  </div>
+  <%# <div> %>
+    <%# <%= form.label "Per" %> 
+    <%# <%= form.select :freq5, ["day", "week", "month"] %><br> 
+  <%# </div> %>
+  <div>
+    <%= form.label "Play frequency" %>
+    <%= form.number_field :play_freq, in: 1..31 %>
+  </div>
+  <%# <div> %>
+    <%# <%= form.label "Per" %> 
+    <%# <%= form.select :freq6, ["day", "week", "month"] %><br> 
+  <%# </div> %>
+  <div>
+    <%= form.submit "Submit" %><br>
+  </div>
+<% end %>

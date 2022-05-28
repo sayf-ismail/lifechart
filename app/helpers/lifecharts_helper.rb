@@ -1,0 +1,2 @@
+module LifechartsHelper
+end

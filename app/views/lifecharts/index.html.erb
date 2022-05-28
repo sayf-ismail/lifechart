@@ -1,0 +1,12 @@
+<h1>Welcome to Lifecharts!</h1>
+<p>Come explore what is meaningful to our users...Enjoy!</p>
+
+<ul>
+  <% @lifecharts.each do |lifechart| %>
+  <li>
+    <%= link_to lifechart.name, lifechart %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Profile", new_lifechart_path %>
