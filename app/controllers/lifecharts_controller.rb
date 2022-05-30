@@ -19,7 +19,6 @@ class LifechartsController < ApplicationController
 
   def create
     @lifechart = Lifechart.new(lifechart_params)
-    debugger
     if @lifechart.save
       redirect_to @lifechart
     else
