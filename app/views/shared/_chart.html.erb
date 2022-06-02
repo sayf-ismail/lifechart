@@ -1,11 +1,11 @@
 <div class="container">
   <% @total_weeks.times do |week|%>
     <% if week < @age_in_weeks%>
-      <%= image_tag("/assets/BadTomato.png", size: "10")%>
+      <%= image_tag("/public/BadTomato.png", size: "10")%>
     <% elsif week == @age_in_weeks %>
-      <%= image_tag("/assets/GrayTomato.png", size: "12")%>
+      <%= image_tag("/public/GrayTomato.png", size: "12")%>
     <% else %>
-      <%= image_tag("/assets/GoodTomato.png", size: "10")%>
+      <%= image_tag("/public/GoodTomato.png", size: "10")%>
     <% end %>
   <% end %>
 </div>
