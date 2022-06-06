@@ -4,6 +4,7 @@
 <%= link_to "BACK", lifecharts_path %>
 
 <ul>
+  <li>USER_ID: <%= @lifechart.user_id %></li>
   <li>🏃🏽 body 🏃🏽 <%= @lifechart.body_freq %> /week</li>
   <li>🧘🏼‍♀️ mind 🧘🏼‍♀️<%= @lifechart.mind_freq %> /year</li>
   <li>🫶🏻 love 🫶🏻<%= @lifechart.love_freq %> /month</li>

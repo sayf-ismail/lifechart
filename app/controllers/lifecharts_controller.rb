@@ -1,4 +1,6 @@
 class LifechartsController < ApplicationController
+  include LifechartsHelper
+
   def index
     @lifecharts = Lifechart.all
   end
@@ -19,6 +21,8 @@ class LifechartsController < ApplicationController
 
   def create
     @lifechart = Lifechart.new(lifechart_params)
+    @lifechart = assign_lifechart_creator(@lifechart, current_user)
+
     if @lifechart.save
       redirect_to @lifechart
     else
