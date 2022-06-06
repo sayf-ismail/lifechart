@@ -10,8 +10,22 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <header></header>
+  <header>
+    <% if current_user %>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Register", new_user_registration_path %>
+      <%= link_to "Log in", new_user_session_path %>
+    <% end %>
+  </header>
   <body>
+    <main>
+      <% if notice %>
+        <div class="notice"><%= notice %></div>
+      <% elsif alert %>
+        <div class="alert"><%= alert %></div>  
+      <% end %>
+    </main>
     <%= yield %>
   </body>
 </html>
