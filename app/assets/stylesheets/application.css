@@ -37,3 +37,21 @@ ul {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
 }
+
+body::after {
+  display: block;
+  height: 50px; /* Set same as footer's height */
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+@media print {
+  header, form, h1, p, a, ul {
+    display: none;
+  }
+}

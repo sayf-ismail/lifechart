@@ -2,6 +2,7 @@
 <p>Here are frequency of their activities:</p>
 
 <%= link_to "BACK", lifecharts_path %>
+<%= button_to 'PDF', lifechart_path, :onclick => 'window.print();return false;'%>
 
 <ul>
   <li>USER_ID: <%= @lifechart.user_id %></li>
