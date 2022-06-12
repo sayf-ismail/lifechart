@@ -33,7 +33,7 @@ ul {
   color: red;
 }
 
-.container {
+.chart-container {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
 }
