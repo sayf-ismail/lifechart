@@ -8,6 +8,10 @@ gem "rails", "~> 7.0.3"
 
 gem 'devise'
 
+gem 'httparty'
+
+gem 'htmlcsstoimage-api'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -83,3 +87,5 @@ end
 group :development, :test do
   gem "rspec-rails"
 end
+
+gem "tailwindcss-rails", "~> 2.0"

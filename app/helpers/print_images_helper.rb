@@ -1,0 +1,2 @@
+module PrintImagesHelper
+end
