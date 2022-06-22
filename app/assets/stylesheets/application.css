@@ -8,7 +8,6 @@ body {
 }
 
 div {
-  width: 50%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -19,7 +18,7 @@ ul {
 }
 
 
-.btn {
+/* .btn {
   width: 50%;
   margin: auto;
   box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
@@ -27,13 +26,14 @@ ul {
   border-radius: 10px;
   color: white;
   max-width: 40rem;
-}
+} */
 
 .errmsg {
   color: red;
 }
 
 .chart-container {
+  width: 50%;
   display: grid;
   grid-template-columns: repeat(52, 1fr);
 }

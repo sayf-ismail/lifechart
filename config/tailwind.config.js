@@ -16,7 +16,7 @@ module.exports = {
         "tailend-blue": "#7dd3fc",
         "tailend-red": "#fca5a5",
         "tailend-grey": "#94a3b8",
-        "tailend-white": "#c084fc",
+        "tailend-white": "#f1f5f9",
       },
     },
     fontFamily: {
