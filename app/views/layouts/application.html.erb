@@ -19,21 +19,20 @@
       <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-tailend-blue uppercase">
 
         <li><%= link_to "Home", site_index_path %></li>
-        <li><%= link_to "New Profile", lifecharts_path %></li>
-        <li>Newsletter</li>
         <% if current_user %>
           <li>
             <%= button_to "Sign out", destroy_user_session_path, class:, method: :delete %>
           </li>
+          <li><%= link_to "New Profile", lifecharts_path %></li>
           <li><%= link_to "My Lifechart", lifechart_path(current_user) %></li>
         <% else %>
           <li><%= link_to "Register", new_user_registration_path %></li>
           <li><%= link_to "Log in", new_user_session_path, class: "whitespace-nowrap bg-tailend-purple text-white rounded-md px-7 py-3" %></li>
         <% end %>
-        </ul>
-        <ul class="flex sm:hidden flex-1 justify-end">
-          <%= image_tag("Hamburger_icon.svg.png", size: "25")%>
-        </ul>
+      </ul>
+      <ul class="flex sm:hidden flex-1 justify-end">
+        <%= image_tag("Hamburger_icon.svg.png", size: "25")%>
+      </ul>
     </nav>
   </header>
   <body>
@@ -57,10 +56,6 @@
           <li><%= link_to "Features", site_index_path %></li>
           <li><%= link_to "Contact", site_index_path %></li>
         </ul>
-      </div>
-      <div class="flex gap-10 mt-12 md:mt-0">
-        <li class="text-white text-2xl">FB</li>
-        <li class="text-white text-2xl">Twitter</li>
       </div>
     </div>
   </footer>

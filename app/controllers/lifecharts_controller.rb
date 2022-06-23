@@ -13,6 +13,10 @@ class LifechartsController < ApplicationController
     years = 90
     weeks_per_year = 52 
     @total_weeks = years*weeks_per_year 
+
+    # how many images per line
+    @size_before = (10 / @lifechart.weekly_freq_before).to_s
+    @size_after = (10 / @lifechart.weekly_freq_after).to_s
   end
 
   def new
@@ -35,6 +39,6 @@ class LifechartsController < ApplicationController
   private
 
     def lifechart_params
-      params.require(:lifechart).permit(:birthday, :body_freq, :mind_freq, :love_freq,:work_freq,:play_freq,:money_freq,:name)
+      params.require(:lifechart).permit(:birthday, :activity, :weekly_freq_before, :weekly_freq_after, :name)
     end
 end

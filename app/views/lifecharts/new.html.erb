@@ -17,23 +17,16 @@
     <% end %>
 
     <br>
-    <%= form.label "Body frequency" %>
-    <%= form.number_field :body_freq, in: 1..31 %>
 
-    <%= form.label "Mind frequency" %>
-    <%= form.number_field :mind_freq, in: 1..31 %>
 
-    <%= form.label "Love frequency" %>
-    <%= form.number_field :love_freq, in: 1..31 %>
+    <%= form.label "Activity" %>
+    <%= form.text_field :activity, placeholder: "eg movies with siblings" %>
 
-    <%= form.label "Work frequency" %>
-    <%= form.number_field :work_freq, in: 1..31 %>
+    <%= form.label "Past weekly frequency" %>
+    <%= form.number_field :weekly_freq_before, in: 1..31 %>
 
-    <%= form.label "Money frequency" %>
-    <%= form.number_field :money_freq, in: 1..31 %>
-
-    <%= form.label "Play frequency" %>
-    <%= form.number_field :play_freq, in: 1..31 %>
+    <%= form.label "Planned weekly frequency" %>
+    <%= form.number_field :weekly_freq_after, in: 1..31 %>
 
     <br />
     <%= form.submit "Submit", class: "btn" %><br>

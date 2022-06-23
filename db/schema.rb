@@ -10,19 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_02_060036) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_23_070757) do
   create_table "lifecharts", force: :cascade do |t|
     t.date "birthday"
-    t.integer "body_freq"
-    t.integer "mind_freq"
-    t.integer "love_freq"
-    t.integer "work_freq"
-    t.integer "money_freq"
-    t.integer "play_freq"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
     t.integer "user_id"
+    t.text "activity"
+    t.integer "weekly_freq_before"
+    t.integer "weekly_freq_after"
     t.index ["user_id"], name: "index_lifecharts_on_user_id"
   end
 

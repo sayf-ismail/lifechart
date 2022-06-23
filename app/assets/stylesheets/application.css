@@ -13,6 +13,10 @@ div {
   flex-direction: column;
 }
 
+.field {
+  margin: 0 20%;
+}
+
 ul {
   list-style: none;
 }
@@ -48,6 +52,15 @@ footer {
   bottom: 0;
   width: 100%;
   height: 50px;
+}
+
+.freqChild {
+  display: flex;
+  width: max-content;
+}
+
+.freqChild {
+  flex-direction: row;
 }
 
 @media print {
