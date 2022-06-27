@@ -7,8 +7,8 @@
 <ul>
   <li>USER_ID: <%= @lifechart.user_id %></li>
   <li>Activity: <%= @lifechart.activity %></li>
-  <li>🏃🏽 Previously 🏃🏽 <%= @lifechart.weekly_freq_before %> per week or <%= @lifechart.weekly_freq_before * 52 %> per year</li>
-  <li>🏃🏽 Planned 🏃🏽 <%= @lifechart.weekly_freq_after %> per week or <%= @lifechart.weekly_freq_after * 52 %> per year</li>
+  <li>🏃🏽 Previously 🏃🏽 <br /><%= @lifechart.weekly_freq_before %> times per week or <%= @lifechart.weekly_freq_before * 52 %> times per year</li>
+  <li>🏃🏽 Planned 🏃🏽 <br /><%= @lifechart.weekly_freq_after %> per week or <%= @lifechart.weekly_freq_after * 52 %> per year</li>
 </ul>
 
 <%= render 'shared/chart' %>

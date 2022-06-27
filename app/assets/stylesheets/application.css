@@ -67,4 +67,7 @@ footer {
   header, form, h1, p, a, ul {
     display: none;
   }
+  .freqChild {
+    display: block;
+  }
 }

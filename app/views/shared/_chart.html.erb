@@ -1,4 +1,4 @@
-<div class="chart-container">
+<div class="chart-container my-96">
   <% @total_weeks.times do |week|%>
     <% if week < @age_in_weeks%>
       <% if @lifechart.weekly_freq_before == 1 %>
@@ -13,9 +13,15 @@
       </div>
       <% end %>
     <% elsif week == @age_in_weeks %>
-      <%= image_tag("GrayTomato.png", size: "12")%>
+      <%= image_tag("GrayTomato.png", size: "10")%>
     <% else %>
-      <%= image_tag("GoodTomato.png", size: "15")%>
+      <div class="freqParent">
+        <div class="freqChild">
+          <% @lifechart.weekly_freq_after.times do %>
+            <%= image_tag("GoodTomato.png", size: @size_after)%>
+          <% end %>
+        </div>
+      </div>
     <% end %>
   <% end %>
 </div>

@@ -15,8 +15,10 @@ class LifechartsController < ApplicationController
     @total_weeks = years*weeks_per_year 
 
     # how many images per line
-    @size_before = (10 / @lifechart.weekly_freq_before).to_s
-    @size_after = (10 / @lifechart.weekly_freq_after).to_s
+    if @lifechart.weekly_freq_after && @lifechart.weekly_freq_before
+      @size_before = (10 / @lifechart.weekly_freq_before).to_s 
+      @size_after = (10 / @lifechart.weekly_freq_after).to_s
+    end
   end
 
   def new
